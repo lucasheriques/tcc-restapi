@@ -12,6 +12,10 @@ app.get("/teachers", (req, res) => {
   res.status(200).send(db.getTeachers());
 });
 
+app.get("/teachers/battery", (req, res) => {
+  res.status(200).send(db.hugeGetTeachers());
+});
+
 app.get("/teachers/:id", (req, res) => {
   const id = req.params.id;
   res.status(200).send(db.getTeacher(id));
